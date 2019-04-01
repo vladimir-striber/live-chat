@@ -1,18 +1,47 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home container">
+    <div class="card">
+      <div class="card-content center-align">
+        <h2 class="teal-text">Welcome</h2>
+        <form @submit.prevent="enterChat">
+          <label for="yourName">Enter your name</label>
+          <input type="text" name="name" id="yourName" v-model="name">
+          <button class="btn teal">Enter chat</button>
+        </form>
+
+      </div>
+    </div>
+
   </div>
+
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  export default {
+    name: "hello-world",
+    data() {
+      return {
+        name: null,
+      }
+    },
+    methods: {
+      enterChat() {
+        console.log(this.name);
+      }
+    }
   }
-}
 </script>
+
+<style lang="scss">
+  .home {
+    max-width: 400px;
+    margin-top: 100px;
+    h2 {
+      font-size: 3em;
+    }
+    button {
+      margin: 30px auto;
+    }
+  }
+
+</style>
