@@ -19,7 +19,7 @@
 
 <script>
   export default {
-    name: "hello-world",
+    name: "Home",
     data() {
       return {
         name: null,
@@ -43,7 +43,7 @@
 <style lang="scss">
   .home {
     max-width: 400px;
-    margin-top: 100px;
+    margin: 100px auto;
     h2 {
       font-size: 3em;
     }
